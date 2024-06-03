@@ -2,10 +2,11 @@ import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import TrafficListItem from './TrafficListItem';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom'; // useLocation 추가
 import { BiLoader } from 'react-icons/bi';
 import SideBar from './SideBar';
 
+// 스타일 컴포넌트 정의
 const PaginationBox = styled.div`
   display: flex;
   justify-content: center;
@@ -159,12 +160,13 @@ const EmptyItem = styled.div`
 `;
 
 const TrafficList = () => {
-  const [initialData, setInitialData] = useState([]); // 초기 API에서 받아온 데이터 추가 용도
+  const [initialData, setInitialData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
-  const [filteredData, setFilteredData] = useState([]); // 필터링된 데이터 추가용도
-  const [chartData, setChartData] = useState([]); // 차트 데이터
+  const [filteredData, setFilteredData] = useState([]);
+  const [chartData, setChartData] = useState([]);
   const { category, sideBarMenu } = useParams();
+  const location = useLocation();
   const [pagination, setPagination] = useState({
     pageList: 10,
     page: 1,
@@ -173,12 +175,9 @@ const TrafficList = () => {
     pageGroup: 1,
     pageListGroup: 10,
   });
-
   const [chooseButton, setChooseButton] = useState(false);
+  const [showTodayData, setShowTodayData] = useState(false);
 
-  const [showTodayData, setShowTodayData] = useState(false); // 오늘 데이터
-
-  // 데이터 가져오기
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -186,23 +185,21 @@ const TrafficList = () => {
         const response = await axios.get(
           'https://openapi.its.go.kr:9443/eventInfo?apiKey=7fe8774ef8a0410e8c73592ab023f079&type=all&eventType=all&getType=json'
         );
-        // API에서 받아온 데이터를 날짜순으로 정렬하기위함
         const sortedData = response.data.body.items.sort((a, b) => {
-          const parseDate = (dateStr) => {
-            const year = dateStr.slice(0, 4);
-            const month = dateStr.slice(4, 6);
-            const day = dateStr.slice(6, 8);
-            const hour = dateStr.slice(8, 10);
-            const minute = dateStr.slice(10, 12);
-            const second = dateStr.slice(12, 14);
-            return new Date(
-              `${year}-${month}-${day}T${hour}:${minute}:${second}`
+          const parseDate = (dateStr) =>
+            new Date(
+              `${dateStr.slice(0, 4)}-${dateStr.slice(4, 6)}-${dateStr.slice(
+                6,
+                8
+              )}T${dateStr.slice(8, 10)}:${dateStr.slice(
+                10,
+                12
+              )}:${dateStr.slice(12, 14)}`
             );
-          };
           return parseDate(b.startDate) - parseDate(a.startDate);
         });
         setInitialData(sortedData);
-        setFilteredData(sortedData); // 초기데이터설정
+        setFilteredData(sortedData);
         setPagination((prevPagination) => ({
           ...prevPagination,
           totalPage: Math.ceil(sortedData.length / prevPagination.pageList),
@@ -212,35 +209,43 @@ const TrafficList = () => {
           ),
         }));
       } catch (e) {
-        console.log(e);
+        console.error(e);
       }
       setLoading(false);
     };
     fetchData();
   }, []);
 
-  // 카테고리 사이드바 오늘의데이터 버튼 클릭시
-  // 리렌더링없이 사용하기위함?
-  // item.type, item.eventType 은 한글인데 category, sideBarMenu는 영어로 나와서 URL변경함
+  // URL 변경 시 필터 초기화
+  useEffect(() => {
+    setFilteredData(initialData);
+    setPagination((prevPagination) => ({
+      ...prevPagination,
+      totalPage: Math.ceil(initialData.length / prevPagination.pageList),
+      pageNum: Array.from(
+        { length: Math.ceil(initialData.length / prevPagination.pageList) },
+        (_, i) => i + 1
+      ),
+      page: 1,
+    }));
+  }, [location, initialData]);
+
   const filteredTrafficData = useMemo(() => {
-    let data = initialData;
-    if (category && category !== '전체') {
+    let data = filteredData;
+    if (category && category !== '전체')
       data = data.filter((item) => item.type === category);
-    }
-    if (sideBarMenu && sideBarMenu !== '전체보기') {
+    if (sideBarMenu && sideBarMenu !== '전체보기')
       data = data.filter((item) => item.eventType === sideBarMenu);
-    }
     if (showTodayData) {
-      const today = new Date();
-      const todayString = `${today.getFullYear()}${String(
-        today.getMonth() + 1
-      ).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
+      const todayString = new Date()
+        .toISOString()
+        .slice(0, 10)
+        .replace(/-/g, '');
       data = data.filter((item) => item.startDate.startsWith(todayString));
     }
     return data;
-  }, [initialData, category, sideBarMenu, showTodayData]);
+  }, [filteredData, category, sideBarMenu, showTodayData]);
 
-  // 페이지네이션
   useEffect(() => {
     setPagination((prevPagination) => ({
       ...prevPagination,
@@ -255,50 +260,36 @@ const TrafficList = () => {
         },
         (_, i) => i + 1
       ),
-    }));
-    updateChartData(filteredTrafficData);
-    // 페이지 초기화
-    setPagination((prevPagination) => ({
-      ...prevPagination,
       page: 1,
     }));
+    updateChartData(filteredTrafficData);
   }, [filteredTrafficData]);
 
-  // 검색 핸들러
   const handleSearch = () => {
-    const filteredData = initialData.filter((item) =>
+    const filtered = initialData.filter((item) =>
       item.roadName.includes(search)
     );
-    console.log(filteredData);
+    setFilteredData(filtered);
+    setSearch('');
     setPagination((prevPagination) => ({
       ...prevPagination,
-      totalPage: Math.ceil(filteredData.length / prevPagination.pageList),
-      totalPageBtn: Math.ceil(
-        Math.ceil(filteredData.length / prevPagination.pageList) /
-          prevPagination.pageListBtn
+      totalPage: Math.ceil(filtered.length / prevPagination.pageList),
+      pageNum: Array.from(
+        { length: Math.ceil(filtered.length / prevPagination.pageList) },
+        (_, i) => i + 1
       ),
+      page: 1,
     }));
-    setFilteredData(filteredData); // 검색결과로 데이터 업데이트
-    setInitialData(filteredData);
-    updateChartData(filteredData);
-    setSearch('');
   };
 
   const onKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
+    if (e.key === 'Enter') handleSearch();
   };
 
-  // 페이지 번호 클릭
   const handlePageClick = (page) => {
-    setPagination((prevPagination) => ({
-      ...prevPagination,
-      page,
-    }));
+    setPagination((prevPagination) => ({ ...prevPagination, page }));
   };
 
-  // 페이지 이전 버튼
   const handlePrevGroup = () => {
     setPagination((prevPagination) => ({
       ...prevPagination,
@@ -307,7 +298,6 @@ const TrafficList = () => {
     }));
   };
 
-  // 페이지 다음 버튼
   const handleNextGroup = () => {
     setPagination((prevPagination) => ({
       ...prevPagination,
@@ -321,6 +311,24 @@ const TrafficList = () => {
     startPage + pagination.pageListGroup - 1,
     pagination.totalPage
   );
+
+  const handleTodayButtonClick = () => {
+    setShowTodayData(!showTodayData);
+    setChooseButton(!chooseButton);
+    setPagination((prevPagination) => ({ ...prevPagination, page: 1 }));
+  };
+
+  const updateChartData = (data) => {
+    const newChartData = data.reduce((acc, item) => {
+      const category = item.eventType;
+      const existingCategory = acc.find((data) => data.subject === category);
+      if (existingCategory) existingCategory.A += 1;
+      else acc.push({ subject: category, A: 1, fullMark: 150 });
+      return acc;
+    }, []);
+    setChartData(newChartData);
+  };
+
   if (loading) {
     return (
       <TrafficListBlock>
@@ -331,47 +339,13 @@ const TrafficList = () => {
     );
   }
 
-  if (!filteredTrafficData) {
-    return null;
-  }
-
-  const handleTodayButtonClick = () => {
-    setShowTodayData(!showTodayData);
-    setChooseButton(!chooseButton);
-    setPagination((prevPagination) => ({
-      ...prevPagination,
-      page: 1,
-    }));
-  };
-
-  // 차트에 데이터를 보내기위한 가공
-  const updateChartData = (data) => {
-    const newChartData = data.reduce((acc, item) => {
-      const category = item.eventType;
-      const existingCategory = acc.find((data) => data.subject === category);
-      if (existingCategory) {
-        existingCategory.A += 1;
-      } else {
-        acc.push({ subject: category, A: 1, fullMark: 150 });
-      }
-      return acc;
-    }, []);
-    setChartData(newChartData);
-  };
-
   return (
     <>
       <TrafficListBlock>
         <SearchDiv>
-          {chooseButton ? (
-            <button className="todayData" onClick={handleTodayButtonClick}>
-              전체 데이터
-            </button>
-          ) : (
-            <button className="todayData" onClick={handleTodayButtonClick}>
-              오늘의 데이터
-            </button>
-          )}
+          <button className="todayData" onClick={handleTodayButtonClick}>
+            {chooseButton ? '전체 데이터' : '오늘의 데이터'}
+          </button>
           <div className="search">
             <input
               placeholder="도로명"
@@ -398,7 +372,6 @@ const TrafficList = () => {
         ) : (
           <EmptyItem>데이터가 존재하지 않습니다.</EmptyItem>
         )}
-        {/* <SideBar data={chartData} /> */}
         <SideBar data={chartData} />
       </TrafficListBlock>
       <PaginationBox>

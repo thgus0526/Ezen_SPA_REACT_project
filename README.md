@@ -1,13 +1,24 @@
 # 도로 돌발상황 React 프로젝트
 
+## 개발 기간
+2024 05.24 ~ 2024 06.04
+
 ## 사용언어
 Javascript
 
 ## 라이브러리
-React Node.js Styled Components axios sass React-redux Recharts
+- React
+- Node.js
+- Styled Components
+- axios
+- sass
+- React-redux
+- Recharts
 
 ## 사용 툴
-vscode git sourcetree
+- vscode
+-  git
+-  sourcetree
 
 ## 프로젝트 구성
 
@@ -26,8 +37,8 @@ vscode git sourcetree
 
 ## 저작권 및 사용권 정보
 
-돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
-kakao 지도 api : https://apis.map.kakao.com/
+- 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
+- kakao 지도 api : https://apis.map.kakao.com/
 
 ## 프로그래머 정보
 
@@ -35,8 +46,8 @@ kakao 지도 api : https://apis.map.kakao.com/
 
 ## 참고 및 출처
 
-돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
-kakao 지도 api : https://apis.map.kakao.com/
+- 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
+- kakao 지도 api : https://apis.map.kakao.com/
 
 ## 화면
 

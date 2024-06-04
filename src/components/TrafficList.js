@@ -177,13 +177,13 @@ const TrafficList = () => {
   });
   const [chooseButton, setChooseButton] = useState(false);
   const [showTodayData, setShowTodayData] = useState(false);
-
+  const API = process.env.REACT_APP_TRAFFIC_API_KEY;
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          'https://openapi.its.go.kr:9443/eventInfo?apiKey=<개인 api키>&type=all&eventType=all&getType=json'
+          `https://openapi.its.go.kr:9443/eventInfo?apiKey=${API}&type=all&eventType=all&getType=json`
         );
         const sortedData = response.data.body.items.sort((a, b) => {
           const parseDate = (dateStr) =>

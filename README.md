@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 📋도로 돌발상황 React 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📆개발 기간
+2024 05.24 ~ 2024 06.04
 
-## Available Scripts
+## 💻사용언어
+- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+- <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+- <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
 
-In the project directory, you can run:
+## 📟라이브러리
+- <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+- <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
+- <img src="https://img.shields.io/badge/styled components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
+- ![axios](https://img.shields.io/badge/axios-blue.svg)
+- ![React_redux](https://img.shields.io/badge/React_redux-pink.svg)
+- <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/>
+- ![ReCharts](https://img.shields.io/badge/ReCharts-red.svg)
 
-### `yarn start`
+## ⌨사용 툴
+- <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
+-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+-  ![SourcTree](https://img.shields.io/badge/SourcTree-skyblue.svg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙프로젝트 구성
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![프로젝트 구성](https://github.com/thgus0526/Ezen_first_project/assets/76036655/792101d0-7090-429a-bef1-e81b6764481c)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠프로젝트 프로그램 설치방법
 
-### `yarn build`
+- npm i
+- 개인 api 받기
+- yarn start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💾프로젝트 프로그램 사용법
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![졸라맨](https://github.com/thgus0526/Ezen_first_project/assets/76036655/0a72f405-d119-4391-85ef-092624c63938)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔒저작권 및 사용권 정보
 
-### `yarn eject`
+- 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
+- kakao 지도 api : https://apis.map.kakao.com/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👨‍🦱프로그래머 정보
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+장소현 임정빈 김유민 한상민 유성헌 변성진
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💡참고 및 출처
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
+- kakao 지도 api : https://apis.map.kakao.com/
 
-## Learn More
+## 🖼화면
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 메인 페이지
+![1 (2)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/3555216c-8328-47b9-8915-13f50845e7fb)
+<br><br><br>
+### 오늘의 데이터
+![1 (6)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/c95e2ef3-da8f-4d9b-9b07-9acfd59c414f)
+<br><br><br>
+### 차트
+![1 (5)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/75d5c04c-a803-4e2b-95da-73d29aa49c14)
+<br><br><br>
+### 리스트 클릭시 상세 정보
+![1 (4)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/82ca6414-d903-4f0b-936f-d29a775e3c93)
+<br><br><br>
+### 카테고리에 따른 데이터 변화
+![1 (3)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/2f350d60-7335-4f9a-beba-1bcea6ce2a4a)
+<br><br><br>
+### 검색 Search
+![1 (8)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/47df7350-a305-4983-8c27-3be17a56b5c6)
+<br><br><br>
+### 지도 Detail
+![1 (9)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/763a9d8c-61cc-4f09-a3e1-bb7bb011ea11)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎬시연영상

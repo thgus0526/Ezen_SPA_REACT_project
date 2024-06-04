@@ -8,7 +8,7 @@ Javascript
 
 ## 라이브러리
 - React
-- Node.js
+- <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
 - Styled Components
 - axios
 - sass

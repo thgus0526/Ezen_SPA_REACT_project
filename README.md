@@ -1,5 +1,14 @@
 # 도로 돌발상황 React 프로젝트
 
+## 사용언어
+Javascript
+
+## 라이브러리
+React Node.js Styled Components axios sass React-redux Recharts
+
+## 사용 툴
+vscode git sourcetree
+
 ## 프로젝트 구성
 
 ![프로젝트 구성](https://github.com/thgus0526/Ezen_first_project/assets/76036655/792101d0-7090-429a-bef1-e81b6764481c)

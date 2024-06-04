@@ -183,7 +183,7 @@ const TrafficList = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          'https://openapi.its.go.kr:9443/eventInfo?apiKey=7fe8774ef8a0410e8c73592ab023f079&type=all&eventType=all&getType=json'
+          'https://openapi.its.go.kr:9443/eventInfo?apiKey=<개인 api키>&type=all&eventType=all&getType=json'
         );
         const sortedData = response.data.body.items.sort((a, b) => {
           const parseDate = (dateStr) =>

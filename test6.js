@@ -1,7 +1,8 @@
 import React from 'react';
 
 const test = () => {
-  return <div>hi</div>;
+  return <div>탕탕후루후루
+  </div>;
 };
 
 export default test;

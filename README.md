@@ -51,3 +51,5 @@ kakao 지도 api : https://apis.map.kakao.com/
 
 ### 지도 Detail
 ![1 (9)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/763a9d8c-61cc-4f09-a3e1-bb7bb011ea11)
+
+## 시연영상

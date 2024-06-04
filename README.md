@@ -1,12 +1,14 @@
-# 도로 돌발상황 React 프로젝트
+# 📋도로 돌발상황 React 프로젝트
 
-## 개발 기간
+## 📆개발 기간
 2024 05.24 ~ 2024 06.04
 
-## 사용언어
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+## 💻사용언어
+- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+- <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+- <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
 
-## 라이브러리
+## 📟라이브러리
 - <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
 - <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
 - <img src="https://img.shields.io/badge/styled components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
@@ -15,41 +17,41 @@
 - <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/>
 - ![ReCharts](https://img.shields.io/badge/ReCharts-red.svg)
 
-## 사용 툴
+## ⌨사용 툴
 - <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
 -  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
 -  ![SourcTree](https://img.shields.io/badge/SourcTree-skyblue.svg)
 
-## 프로젝트 구성
+## ⚙프로젝트 구성
 
 ![프로젝트 구성](https://github.com/thgus0526/Ezen_first_project/assets/76036655/792101d0-7090-429a-bef1-e81b6764481c)
 
 
-## 프로젝트 프로그램 설치방법
+## 🛠프로젝트 프로그램 설치방법
 
 - npm i
 - 개인 api 받기
 - yarn start
 
-## 프로젝트 프로그램 사용법
+## 💾프로젝트 프로그램 사용법
 
 ![졸라맨](https://github.com/thgus0526/Ezen_first_project/assets/76036655/0a72f405-d119-4391-85ef-092624c63938)
 
-## 저작권 및 사용권 정보
+## 🔒저작권 및 사용권 정보
 
 - 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
 - kakao 지도 api : https://apis.map.kakao.com/
 
-## 프로그래머 정보
+## 👨‍🦱프로그래머 정보
 
 장소현 임정빈 김유민 한상민 유성헌 변성진
 
-## 참고 및 출처
+## 💡참고 및 출처
 
 - 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
 - kakao 지도 api : https://apis.map.kakao.com/
 
-## 화면
+## 🖼화면
 
 ### 메인 페이지
 ![1 (2)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/3555216c-8328-47b9-8915-13f50845e7fb)
@@ -72,4 +74,4 @@
 ### 지도 Detail
 ![1 (9)](https://github.com/thgus0526/Ezen_first_project/assets/76036655/763a9d8c-61cc-4f09-a3e1-bb7bb011ea11)
 
-## 시연영상
+## 🎬시연영상

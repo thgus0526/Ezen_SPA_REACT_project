@@ -5,7 +5,7 @@ import TrafficListItem from './TrafficListItem';
 import { useParams, useLocation } from 'react-router-dom'; // useLocation 추가
 import { BiLoader } from 'react-icons/bi';
 import SideBar from './SideBar';
-import config from './Api';
+
 // 스타일 컴포넌트 정의
 const PaginationBox = styled.div`
   display: flex;
@@ -177,13 +177,13 @@ const TrafficList = () => {
   });
   const [chooseButton, setChooseButton] = useState(false);
   const [showTodayData, setShowTodayData] = useState(false);
-
+  const API = process.env.REACT_APP_TRAFFIC_API_KEY;
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://openapi.its.go.kr:9443/eventInfo?apiKey=${config.Traffic_API_KEY}&type=all&eventType=all&getType=json`
+          `https://openapi.its.go.kr:9443/eventInfo?apiKey=${API}&type=all&eventType=all&getType=json`
         );
         const sortedData = response.data.body.items.sort((a, b) => {
           const parseDate = (dateStr) =>

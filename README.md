@@ -44,7 +44,7 @@
 
 ## 👨‍🦱프로그래머 정보
 
-- 장소현(github.com/thgus0526)
+- 장소현(https://github.com/thgus0526)
 - 임정빈()
 - 김유민()
 - 한상민([mmm44112@gmail.com](https://github.com/mmm44112?tab=repositories))

@@ -11,10 +11,9 @@
 - <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
 - <img src="https://img.shields.io/badge/styled components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
 - ![axios](https://img.shields.io/badge/axios-blue.svg)
-- ![axios](https://img.shields.io/badge/React_redux-pink.svg)
+- ![React_redux](https://img.shields.io/badge/React_redux-pink.svg)
 - <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/>
-- React-redux
-- Recharts
+- ![ReCharts](https://img.shields.io/badge/ReCharts-red.svg)
 
 ## 사용 툴
 - <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>

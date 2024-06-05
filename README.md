@@ -20,7 +20,7 @@
 ## ⌨사용 툴
 - <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
 -  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
--  ![SourcTree](https://img.shields.io/badge/SourcTree-skyblue.svg)
+-  ![SourceTree](https://img.shields.io/badge/SourceTree-skyblue.svg)
 
 ## ⚙프로젝트 구성
 

@@ -95,3 +95,5 @@
 - 리스트를 클릭하면 지도에 마커 표시
 
 ## 🎬시연영상
+https://github.com/user-attachments/assets/fced9e49-c906-4d36-826c-cc3ed0cb3144
+

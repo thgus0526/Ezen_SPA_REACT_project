@@ -53,9 +53,7 @@
 
 ## 📃 관련문서
 - Notion: [https://ubiquitous-slip2db.notion.site/813a36d217a3409696c9fddbe6e9aac0v=ed4677bb638a4329b4ea78b68b57a955&pvs=4](https://ubiquitous-slip-2db.notion.site/813a36d217a3409696c9fddbe6e9aac0?v=ed4677bb638a4329b4ea78b68b57a955)
-- pdf: [2조_도로 돌발상황 프로젝트.pdf](https://github.com/user-attachments/files/16360393/2._.pdf)
-- pptx: [2조_도로 돌발상황 프로젝트.pptx](https://github.com/user-attachments/files/16360392/2._.pptx)
-
+- pdf: [2조_도로 돌발상황 프로젝트.pdf](https://github.com/user-attachments/files/16360498/2._.pdf)
 
 ## 💡참고 및 출처
 

@@ -97,7 +97,9 @@
 ## 🎬시연영상
 https://github.com/user-attachments/assets/fced9e49-c906-4d36-826c-cc3ed0cb3144
 
-### 📃 프로젝트 ppt
-pdf: [2조.pdf](https://github.com/user-attachments/files/16360317/2.pdf)
+## 📃 프로젝트 PPT
+pdf: [2조_도로 돌발상황 프로젝트.pdf](https://github.com/user-attachments/files/16360334/2._.pdf)
 
-pptx: [2조.pptx](https://github.com/user-attachments/files/16360316/2.pptx)
+
+pptx: [2조_도로 돌발상황 프로젝트.pptx](https://github.com/user-attachments/files/16360333/2._.pptx)
+

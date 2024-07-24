@@ -51,6 +51,12 @@
 - 유성헌(https://github.com/c21ysh2)
 - 변성진([byun970@gmail.com](https://github.com/byun970))
 
+## 📃 관련문서
+- Notion: [https://ubiquitous-slip2db.notion.site/813a36d217a3409696c9fddbe6e9aac0v=ed4677bb638a4329b4ea78b68b57a955&pvs=4](https://ubiquitous-slip-2db.notion.site/813a36d217a3409696c9fddbe6e9aac0?v=ed4677bb638a4329b4ea78b68b57a955)
+- pdf: [2조_도로 돌발상황 프로젝트.pdf](https://github.com/user-attachments/files/16360393/2._.pdf)
+- pptx: [2조_도로 돌발상황 프로젝트.pptx](https://github.com/user-attachments/files/16360392/2._.pptx)
+
+
 ## 💡참고 및 출처
 
 - 돌발상황 api : https://www.its.go.kr/opendata/opendataList?service=event <br>
@@ -96,10 +102,3 @@
 
 ## 🎬시연영상
 https://github.com/user-attachments/assets/fced9e49-c906-4d36-826c-cc3ed0cb3144
-
-## 📃 프로젝트 PPT
-pdf: [2조_도로 돌발상황 프로젝트.pdf](https://github.com/user-attachments/files/16360334/2._.pdf)
-
-
-pptx: [2조_도로 돌발상황 프로젝트.pptx](https://github.com/user-attachments/files/16360333/2._.pptx)
-
